@@ -57,6 +57,7 @@ export default {
           color,
           label,
           value,
+          tooltip: obj.tooltip
         });
       }
 
@@ -110,6 +111,7 @@ function toPercent(value, min, max) {
       v-for="(piece, idx) of pieces"
       :key="idx"
       v-trim-whitespace
+      v-tooltip="piece.tooltip"
       :class="{'piece': true, [piece.color]: true}"
       :style="piece.style"
     />
